@@ -47,15 +47,16 @@ yarn add @favware/yarnts-templatenpm install @favware/yarnts-template```
 ### NodeJS
 
 ```js
-const yarnts - template = require('@favware/yarnts-template');
+const YarnTsTemplate = require('@favware/yarnts-template');
 ```
+
 
 When using TypeScript or Babel you can import this module with a default import:
 
 ### Usage in TypeScript / Babel
 
 ```ts
-import yarnts-template from '@favware/yarnts-template'
+import YarnTsTemplate from '@favware/yarnts-template'
 ```
 
 ## Documentation
@@ -63,13 +64,13 @@ import yarnts-template from '@favware/yarnts-template'
 <a name="sampleFunc"></a>
 
 ## sampleFunc(param) ⇒ <code>string</code>
-
-Template repository for Yarn and TypeScript based Node libraries**Kind**: global function
-**Returns**: <code>string</code> - Directly returned "param"
+Template repository for Yarn and TypeScript based Node libraries**Kind**: global function  
+**Returns**: <code>string</code> - Directly returned "param"  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | param | <code>string</code> | Sample parameters |
+
 
 * * *
 
