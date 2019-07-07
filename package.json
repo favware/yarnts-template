@@ -1,0 +1,70 @@
+{
+  "name": "@favware/yarnts-template",
+  "version": "1.0.0",
+  "description": "Template repository for Yarn & TypeScript based libraries",
+  "author": "@favware",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "runkitExampleFilename": "./dist/example.js",
+  "homepage": "https://favware.tech/{{siteurl}}",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/favware/{{reponame}}.git"
+  },
+  "bugs": {
+    "url": "https://github.com/favware/{{reponame}}/issues"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "tslint -p . -c ./tslint.json --format verbose --fix",
+    "prebuild": "yarn lint && yarn test && yarn clean",
+    "build": "rollup -c rollup.config.ts",
+    "start": "yarn build -w",
+    "prepublishOnly": "yarn build && yarn docs",
+    "clean": "rimraf ./dist",
+    "predocs": "yarn docs:clean && yarn lint && yarn docs:build",
+    "docs": "jsdoc2md --template ./docs/template.hbs --files ./docsbuild/*.js --example-lang ts --partial ./docs/partials/description.hbs --partial ./docs/partials/pkg.hbs --partial ./docs/partials/reponame.hbs --partial ./docs/partials/siteurl.hbs > ./README.md",
+    "postdocs": "yarn docs:clean",
+    "docs:clean": "rimraf ./docsbuild",
+    "docs:build": "tsc -p ./tsconfig.docs.json",
+    "copyfiles": "copyfiles -u 1 ./docs/example.js ./dist"
+  },
+  "keywords": [
+    "favware"
+  ],
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@favware/tslint-config": "^1.0.1",
+    "@types/jest": "^24.0.15",
+    "@types/node": "12.0.12",
+    "common-tags": "^1.8.0",
+    "copyfiles": "^2.1.0",
+    "jest": "^24.8.0",
+    "jsdoc-to-markdown": "^5.0.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.16.6",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-progress": "^1.1.1",
+    "rollup-plugin-terser": "5.1.1",
+    "rollup-plugin-typescript2": "^0.21.2",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "tslib": "^1.10.0"
+  }
+}
