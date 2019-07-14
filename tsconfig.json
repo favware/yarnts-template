@@ -12,7 +12,6 @@
         "noImplicitThis": true,
         "noUnusedLocals": true,
         "noFallthroughCasesInSwitch": true,
-        "importHelpers": true,
         "removeComments": false,
         "forceConsistentCasingInFileNames": true,
         "declaration": true,
