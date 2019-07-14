@@ -1,6 +1,6 @@
 {
   "name": "@favware/yarnts-template",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Template repository for Yarn & TypeScript based libraries",
   "author": "@favware",
   "license": "MIT",
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "test": "jest",
-    "lint": "tslint -p . -c ./tslint.json --format verbose --fix",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "prebuild": "yarn lint && yarn test && yarn clean",
     "build": "rollup -c rollup.config.ts",
     "start": "yarn build -w",
@@ -41,7 +41,7 @@
   },
   "peerDependencies": {},
   "devDependencies": {
-    "@favware/tslint-config": "^1.0.1",
+    "@favware/eslint-config": "^1.0.0",
     "@types/jest": "^24.0.15",
     "@types/node": "12.6.2",
     "common-tags": "^1.8.0",
@@ -58,7 +58,7 @@
     "rollup-plugin-typescript2": "^0.22.0",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",
-    "tslint": "^5.18.0",
+    "eslint": "^6.0.1",
     "typescript": "^3.5.3"
   },
   "files": [
