@@ -4,6 +4,7 @@ import external from 'rollup-plugin-peer-deps-external';
 import progress from 'rollup-plugin-progress';
 import { terser } from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
+import cleaner from 'rollup-plugin-cleaner';
 
 export default {
   input: 'src/index.ts',
@@ -22,6 +23,11 @@ export default {
     }
   ],
   plugins: [
+    cleaner({
+      targets: [
+        './dist/'
+      ],
+    }),
     progress(),
     external(),
     resolve(),
@@ -30,8 +36,6 @@ export default {
       clean: true,
     }),
     commonjs(),
-    terser({
-      ecma: 5,
-    })
+    terser({ ecma: 5 })
   ],
 };
