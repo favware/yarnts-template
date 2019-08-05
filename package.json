@@ -28,8 +28,7 @@
     "docs": "jsdoc2md --template ./docs/template.hbs --files ./docsbuild/*.js --example-lang ts --partial ./docs/partials/description.hbs --partial ./docs/partials/reponame.hbs --partial ./docs/partials/siteurl.hbs > ./README.md",
     "postdocs": "yarn docs:clean",
     "docs:clean": "rimraf ./docsbuild",
-    "docs:build": "tsc -p ./tsconfig.docs.json",
-    "copyfiles": "copyfiles -u 1 ./docs/example.js ./dist"
+    "docs:build": "tsc -p ./tsconfig.docs.json"
   },
   "keywords": [
     "favware"
@@ -44,7 +43,6 @@
     "@types/jest": "^24.0.16",
     "@types/node": "12.6.9",
     "common-tags": "^1.8.0",
-    "copyfiles": "^2.1.1",
     "eslint": "^6.1.0",
     "jest": "^24.8.0",
     "jsdoc-to-markdown": "^5.0.0",
