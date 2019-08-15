@@ -168,10 +168,10 @@
     resolve-from "^5.0.0"
     resolve-global "^1.0.0"
 
-"@favware/eslint-config@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@favware/eslint-config/-/eslint-config-2.0.1.tgz#1ab0d709ef1004e98751938ff0679ddf5d5c28e9"
-  integrity sha512-esnsGaZdzoH8c9vW+8T6KK1kYYJoH2hMp9OpMQV9Snw+u3UJe5tkPDzpz/2TG3AVu0aar3hqKi1IuJ7M7sakaQ==
+"@favware/eslint-config@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@favware/eslint-config/-/eslint-config-2.0.2.tgz#9f4cf25d69befabcdeba1b91493d20031b313217"
+  integrity sha512-9C4irIsZZVUkfYI3KJ3+1cg+QxU8k6AIqo0HGFbOssvCk1+xmVzRN2NX9eBjgd4k4j/aKlbUNj0y0hyDMciXMA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.0.0"
     "@typescript-eslint/parser" "^2.0.0"
