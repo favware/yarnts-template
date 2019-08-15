@@ -10,16 +10,9 @@
   "types": "dist/index.d.ts",
   "runkitExampleFilename": "dist/example.js",
   "homepage": "https://favware.tech/{{siteurl}}",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/favware/{{reponame}}.git"
-  },
-  "bugs": {
-    "url": "https://github.com/favware/{{reponame}}/issues"
-  },
   "scripts": {
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "lint": "eslint src test --ext .js,.jsx,.ts,.tsx --fix",
     "prebuild": "yarn lint && yarn test",
     "build": "rollup -c rollup.config.ts",
     "start": "yarn build -w",
@@ -28,24 +21,23 @@
     "docs": "jsdoc2md --template ./docs/template.hbs --files ./docsbuild/*.js --example-lang ts --partial ./docs/partials/description.hbs --partial ./docs/partials/reponame.hbs --partial ./docs/partials/siteurl.hbs > ./README.md",
     "postdocs": "yarn docs:clean",
     "docs:clean": "rimraf ./docsbuild",
-    "docs:build": "tsc -p ./tsconfig.docs.json"
-  },
-  "keywords": [
-    "favware"
-  ],
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
+    "docs:build": "tsc -p ./tsconfig.docs.json",
+    "commit": "git-cz",
+    "cz": "git-cz"
   },
   "peerDependencies": {},
+  "dependencies": {},
   "devDependencies": {
-    "@favware/eslint-config": "^1.0.0",
+    "@favware/eslint-config": "^2.0.0",
     "@types/jest": "^24.0.17",
-    "@types/node": "12.6.9",
+    "@types/node": "12.7.2",
     "common-tags": "^1.8.0",
+    "cz-conventional-changelog": "3.0.2",
     "eslint": "^6.1.0",
+    "husky": "^3.0.3",
     "jest": "^24.8.0",
     "jsdoc-to-markdown": "^5.0.0",
+    "lint-staged": "^9.2.1",
     "rollup": "^1.19.4",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-commonjs": "^10.0.2",
@@ -62,5 +54,38 @@
   "files": [
     "dist"
   ],
-  "dependencies": {}
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/favware/{{reponame}}.git"
+  },
+  "bugs": {
+    "url": "https://github.com/favware/{{reponame}}/issues"
+  },
+  "keywords": [
+    "favware",
+    "typescript",
+    "ts",
+    "yarn"
+  ],
+
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "yarn lint:js",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
