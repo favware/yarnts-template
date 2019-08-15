@@ -24,7 +24,9 @@
     "docs:build": "tsc -p ./tsconfig.docs.json",
     "commit": "git-cz",
     "cz": "git-cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "push": "git push --follow-tags origin master",
+    "publish": "git push --follow-tags origin master && npm publish"
   },
   "peerDependencies": {},
   "dependencies": {},
