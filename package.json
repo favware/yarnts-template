@@ -23,7 +23,8 @@
     "docs:clean": "rimraf ./docsbuild",
     "docs:build": "tsc -p ./tsconfig.docs.json",
     "commit": "git-cz",
-    "cz": "git-cz"
+    "cz": "git-cz",
+    "release": "standard-version"
   },
   "peerDependencies": {},
   "dependencies": {},
@@ -47,6 +48,7 @@
     "rollup-plugin-progress": "^1.1.1",
     "rollup-plugin-terser": "5.1.1",
     "rollup-plugin-typescript2": "^0.22.1",
+    "standard-version": "^7.0.0",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
@@ -71,7 +73,6 @@
     "ts",
     "yarn"
   ],
-
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint-staged"
