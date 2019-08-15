@@ -26,17 +26,17 @@ commands:
 
 # List of jobs
 jobs:
-  node-v8:
+  node-v10:
     docker:
       - image: circleci/node:10
     steps:
       - nodejs
-  node-v10:
+  node-v11:
     docker:
       - image: circleci/node:11
     steps:
       - nodejs
-  node-v11:
+  node-v12:
     docker:
       - image: circleci/node:12
     steps:
