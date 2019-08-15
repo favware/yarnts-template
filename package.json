@@ -31,7 +31,7 @@
   "peerDependencies": {},
   "dependencies": {},
   "devDependencies": {
-    "@favware/eslint-config": "^2.0.0",
+    "@favware/eslint-config": "^2.0.1",
     "@types/jest": "^24.0.17",
     "@types/node": "12.7.2",
     "common-tags": "^1.8.0",
@@ -82,7 +82,7 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "yarn lint:js",
+      "yarn lint",
       "git add"
     ]
   },
