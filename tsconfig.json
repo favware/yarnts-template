@@ -18,8 +18,7 @@
         "noUnusedParameters": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
-        "sourceMap": true,
-        "baseUrl": "src",
+        "sourceMap": true
     },
     "include": ["src"],
 }
