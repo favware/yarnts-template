@@ -18,7 +18,7 @@
   --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/bundlephobia/minzip/@favware/yarnts-template.svg?logo=webpack&style=flat-square" alt="NPM bundle size (minified + gzip)" title="NPM bundle size (minified + gzip)" /></a><!--
   --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/npm/v/@favware/yarnts-template.svg?color=crimson&label=npm%20version&logo=npm&style=flat-square" alt="NPM Version" title="NPM Version" /></a><!--
   --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/npm/dw/@favware/yarnts-template.svg?color=crimson&label=downloads%2Fweek&logo=npm&style=flat-square" alt="NPM Weekly Downloads" title="NPM Weekly Downloads" /></a><!--
-  --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/npm/dt/@favware/yarnts-template.svg?color=crimson&label=downloads%2Fweek&logo=npm&style=flat-square" alt="NPM Total Downloads" title="NPM Total Downloads" /></a>
+  --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/npm/dt/@favware/yarnts-template.svg?color=crimson&label=downloads%20total&logo=npm&style=flat-square" alt="NPM Total Downloads" title="NPM Total Downloads" /></a>
 </p>
 
 <p>
