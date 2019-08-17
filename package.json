@@ -31,6 +31,8 @@
   "peerDependencies": {},
   "dependencies": {},
   "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "@favware/eslint-config": "^3.0.0",
     "@types/jest": "^24.0.17",
     "@types/node": "12.7.2",
@@ -78,8 +80,14 @@
   ],
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "yarn lint-staged"
     }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
