@@ -8,14 +8,17 @@
 <h3> Template repository for Yarn and TypeScript based Node libraries</h3>
   </p>
 <p>
-  <a href="https://github.com/favware/yarnts-template/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/favware/yarnts-template.svg?style=flat-square" alt="License" title="License"></a>
+  <a href="https://github.com/favware/yarnts-template/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/favware/yarnts-template.svg?logo=github&style=flat-square" alt="License" title="License"></a><!--
+  --><a href="https://circleci.com/gh/favware/yarnts-template/tree/master"><img src="https://img.shields.io/circleci/project/github/favware/yarnts-template/master.svg?logo=circleci&style=flat-square" alt="Build Status" title="Build Status" /></a><!--
+  --><a href="https://codecov.io/gh/favware/yarnts-template"><img src="https://img.shields.io/codecov/c/github/favware/yarnts-template?logo=codecov&style=flat-square" alt="Test Coverage" title="Test Coverage" /></a>
 </p>
 
 <p>
-  <a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/bundlephobia/min/@favware/yarnts-template.svg?style=popout-square" alt="NPM bundle size (minified)" title="NPM bundle size (minified)" /></a><!--
-  --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/bundlephobia/minzip/@favware/yarnts-template.svg?style=flat-square" alt="NPM bundle size (minified + gzip)" title="NPM bundle size (minified + gzip)" /></a><!--  --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/npm/v/@favware/yarnts-template.svg?style=flat-square" alt="NPM Version" title="NPM Version" /></a><!--
-  --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/npm/dw/@favware/yarnts-template.svg?style=flat-square" alt="NPM Weekly Downloads" title="NPM Weekly Downloads" /></a><!--
-  --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/npm/dt/@favware/yarnts-template.svg?style=flat-square" alt="NPM Total Downloads" title="NPM Total Downloads" /></a>
+  <a href="https://www.npmjs.com/package/@favware/yarnts-template"><img    src="https://img.shields.io/bundlephobia/min/@favware/yarnts-template.svg?logo=webpack&style=popout-square"  alt="NPM bundle size (minified)" title="NPM bundle size (minified)" /></a><!--
+  --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/bundlephobia/minzip/@favware/yarnts-template.svg?logo=webpack&style=flat-square" alt="NPM bundle size (minified + gzip)" title="NPM bundle size (minified + gzip)" /></a><!--
+  --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/npm/v/@favware/yarnts-template.svg?color=crimson&label=npm%20version&logo=npm&style=flat-square" alt="NPM Version" title="NPM Version" /></a><!--
+  --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/npm/dw/@favware/yarnts-template.svg?color=crimson&label=downloads%2Fweek&logo=npm&style=flat-square" alt="NPM Weekly Downloads" title="NPM Weekly Downloads" /></a><!--
+  --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/npm/dt/@favware/yarnts-template.svg?color=crimson&label=downloads%2Fweek&logo=npm&style=flat-square" alt="NPM Total Downloads" title="NPM Total Downloads" /></a>
 </p>
 
 <p>
@@ -40,14 +43,17 @@ This is a template for any Yarn and TypeScript based library made by Favware. Th
 Install with [yarn](https://yarnpkg.com) or [npm](https://www.npmjs.com/):
 
 ```sh
-yarn add @favware/yarnts-templatenpm install @favware/yarnts-template```
+yarn add @favware/REPLACE_ME
+
+npm install @favware/REPLACE_ME
+```
 
 ## Usage
 
 ### NodeJS
 
 ```js
-const YarnTsTemplate = require('@favware/yarnts-template');
+const REPLACE_ME = require('@favware/yarnts-template');
 ```
 
 
@@ -56,7 +62,7 @@ When using TypeScript or Babel you can import this module with a default import:
 ### Usage in TypeScript / Babel
 
 ```ts
-import YarnTsTemplate from '@favware/yarnts-template'
+import REPLACE_ME from '@favware/yarnts-template'
 ```
 
 ## Documentation
@@ -64,7 +70,7 @@ import YarnTsTemplate from '@favware/yarnts-template'
 <a name="sampleFunc"></a>
 
 ## sampleFunc(param) ⇒ <code>string</code>
-Template repository for Yarn and TypeScript based Node libraries**Kind**: global function  
+**Kind**: global function  
 **Returns**: <code>string</code> - Directly returned "param"  
 
 | Param | Type | Description |
