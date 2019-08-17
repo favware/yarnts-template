@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  codecov: codecov/codecov@1.0.5
+
 commands:
   nodejs:
     steps:
@@ -22,7 +25,12 @@ commands:
           command: yarn lint
       - run:
           name: Testing
-          command: yarn test
+          command: yarn test --collectCoverage
+      - store_artifacts:
+          path: coverage
+      - codecov/upload:
+          file: coverage/*.json
+          flag: ${CIRCLE_JOB}
 
 # List of jobs
 jobs:
