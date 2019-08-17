@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default Import Sample should match snapshot 1`] = `[Function]`;
+
+exports[`Named Import Sample should match snapshot 1`] = `[Function]`;
