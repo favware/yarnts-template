@@ -30,7 +30,7 @@ commands:
           path: coverage
       - codecov/upload:
           file: coverage/*.json
-          flag: ${CIRCLE_JOB}
+          flags: ${CIRCLE_JOB}
 
 # List of jobs
 jobs:
