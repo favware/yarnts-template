@@ -34,6 +34,8 @@
 
 ---
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/favware/yarnts-template.svg)](https://greenkeeper.io/)
+
 ## What does it do?
 
 This is a template for any Yarn and TypeScript based library made by Favware. This template can be used to quickly bootstrap any GitHub repository.
