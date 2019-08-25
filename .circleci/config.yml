@@ -20,6 +20,10 @@ save_yarn: &save_yarn
       - ~/.cache/yarn
       - node_modules
 
+aliases:
+  - &checkout
+    checkout
+
 restore_git: &restore_git
   restore_cache:
     name: Restore Git Cache
@@ -33,17 +37,21 @@ restore_yarn: &restore_yarn
 commands:
   greenkeeper_update:
     steps:
-      - checkout
+      - *checkout
       - <<: [*restore_git, *restore_yarn]
       - run:
           name: update lockfile
-          command: export PATH=$PATH:$(yarn global bin) && yarn global add greenkeeper-lockfile@2 && greenkeeper-lockfile-upload
+          command:
+            export PATH=$PATH:$(yarn global bin) &&
+            yarn global add greenkeeper-lockfile@2 &&
+            greenkeeper-lockfile-update
       - run:
           name: Install dependencies
           command: yarn install --frozen-lockfile
       - <<: [*save_yarn, *save_git]
   nodejs:
     steps:
+      - *checkout
       - <<: [*restore_git, *restore_yarn]
       - run:
           name: Linting
@@ -57,10 +65,14 @@ commands:
           file: coverage/*.json
   greenkeeper_upload:
     steps:
+      - *checkout
       - <<: [*restore_git, *restore_yarn]
       - run:
           name: Upload lockfile
-          command: export PATH=$PATH:$(yarn global bin) && yarn global add greenkeeper-lockfile@2 && greenkeeper-lockfile-upload
+          command:
+            export PATH=$PATH:$(yarn global bin) &&
+            yarn global add greenkeeper-lockfile@2 &&
+            greenkeeper-lockfile-update
 
 # List of jobs
 jobs:
