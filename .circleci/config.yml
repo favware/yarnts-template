@@ -37,10 +37,7 @@ commands:
       - <<: [*restore_git, *restore_yarn]
       - run:
           name: update lockfile
-          command:
-            export PATH=$PATH:$(yarn global bin) && \
-            yarn global add greenkeeper-lockfile@2 && \
-            greenkeeper-lockfile-update
+          command: export PATH=$PATH:$(yarn global bin) && yarn global add greenkeeper-lockfile@2 && greenkeeper-lockfile-upload
       - run:
           name: Install dependencies
           command: yarn install --frozen-lockfile
@@ -63,10 +60,7 @@ commands:
       - <<: [*restore_git, *restore_yarn]
       - run:
           name: Upload lockfile
-          command:
-            export PATH=$PATH:$(yarn global bin) && \
-            yarn global add greenkeeper-lockfile@2 && \
-            greenkeeper-lockfile-update
+          command: export PATH=$PATH:$(yarn global bin) && yarn global add greenkeeper-lockfile@2 && greenkeeper-lockfile-upload
 
 # List of jobs
 jobs:
