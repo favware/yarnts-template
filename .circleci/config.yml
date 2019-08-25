@@ -4,11 +4,6 @@ orbs:
   codecov: codecov/codecov@1.0.5
 
 aliases:
-  - &base_image
-    image: circleci/node:10
-  - &docker_setup
-    docker:
-      - <<: *base_image
   - &save_git
     save_cache:
       name: Save Git Cache
@@ -79,11 +74,13 @@ commands:
 # List of jobs
 jobs:
   lockfile_update:
-    *docker_setup
+    docker:
+      - image: circleci/node:10
     steps:
       - greenkeeper_update
   node-v10:
-    *docker_setup
+    docker:
+      - image: circleci/node:10
     steps:
       - nodejs
   node-v11:
@@ -97,7 +94,8 @@ jobs:
     steps:
       - nodejs
   lockfile_upload:
-    *docker_setup
+    docker:
+      - image: circleci/node:10
     steps:
       - greenkeeper_upload
 
