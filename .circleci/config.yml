@@ -34,11 +34,8 @@ commands:
       - checkout
       - *restore_yarn
       - run:
-          name: Install Greenkeeper Lockfile
-          command: yarn global add greenkeeper-lockfile@2
-      - run:
           name: update lockfile
-          command: greenkeeper-lockfile-update
+          command: yarn greenkeeper-lockfile-update
       - run:
           name: Install dependencies
           command: yarn install --frozen-lockfile
@@ -63,11 +60,8 @@ commands:
       - *restore_git
       - *restore_yarn
       - run:
-          name: Install Greenkeeper Lockfile
-          command: yarn global add greenkeeper-lockfile@2
-      - run:
           name: Upload lockfile
-          command: greenkeeper-lockfile-upload
+          command: yarn greenkeeper-lockfile-upload
 
 # List of jobs
 jobs:
