@@ -3,12 +3,19 @@ version: 2.1
 orbs:
   codecov: codecov/codecov@1.0.5
 
+aliases:
+  - &checkout
+    checkout
+
+run_yarn: &run_yarn
+  name: Install yarn packages
+  command: yarn install --frozen-lockfile
+
 save_git: &save_git
   save_cache:
     name: Save Git Cache
     key: git-code-{{ .Revision }}
     paths:
-      - .
       - .git
       - ~/.ssh
 
@@ -19,14 +26,6 @@ save_yarn: &save_yarn
     paths:
       - ~/.cache/yarn
       - node_modules
-
-run_yarn: &run_yarn
-  name: Install yarn packages
-  command: yarn install --frozen-lockfile
-
-aliases:
-  - &checkout
-    checkout
 
 restore_git: &restore_git
   restore_cache:
@@ -112,7 +111,10 @@ workflows:
   version: 2
   node-multi-build:
     jobs:
-      - lockfile_update
+      - lockfile_update:
+          filters:
+            branches:
+              ignore: master
       - node-v10:
           requires:
             - lockfile_update
@@ -128,3 +130,6 @@ workflows:
             - node-v10
             - node-v11
             - node-v12
+          filters:
+            branches:
+              ignore: master
