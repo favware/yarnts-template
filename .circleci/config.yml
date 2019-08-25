@@ -104,18 +104,18 @@ workflows:
   node-multi-build:
     jobs:
       - lockfile_update
-      - node-v10
-        requires:
-          - lockfile_update
-      - node-v11
-        requires:
-          - lockfile_update
-      - node-v12
-        requires:
-          - lockfile_update
-      - lockfile_upload
-        requires:
-          - lockfile_update
-          - node-v10
-          - node-v11
-          - node-v12
+      - node-v10:
+          requires:
+            - lockfile_update
+      - node-v11:
+          requires:
+            - lockfile_update
+      - node-v12:
+          requires:
+            - lockfile_update
+      - lockfile_upload:
+          requires:
+            - lockfile_update
+            - node-v10
+            - node-v11
+            - node-v12
