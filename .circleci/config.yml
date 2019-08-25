@@ -137,7 +137,6 @@ workflows:
             - lockfile_update
       - lockfile_upload:
           requires:
-            - lockfile_update
             - node-v10
             - node-v11
             - node-v12
