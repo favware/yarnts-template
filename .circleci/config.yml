@@ -34,6 +34,12 @@ commands:
       - checkout
       - *restore_yarn
       - run:
+          name: Install greenkeeper-lockfile globally
+          command: yarn global add greenkeeper-lockfile@2
+      - run:
+          name: Echo Path
+          command: echo $PATH && echo "" && echo $PATH | grep yarn
+      - run:
           name: update lockfile
           command: yarn greenkeeper-lockfile-update
       - run:
