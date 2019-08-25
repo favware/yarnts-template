@@ -40,7 +40,6 @@
     "common-tags": "^1.8.0",
     "cz-conventional-changelog": "3.0.2",
     "eslint": "^6.2.2",
-    "greenkeeper-lockfile": "2",
     "husky": "^3.0.4",
     "jest": "^24.9.0",
     "jsdoc-to-markdown": "^5.0.0",
