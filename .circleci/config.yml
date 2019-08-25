@@ -30,26 +30,17 @@ restore_yarn: &restore_yarn
     name: Restore Yarn Package Cache
     key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
-add_yarn_global: &add_yarn_global
-  name: Add yarn global bin to PATH
-  command: export PATH=$PATH:$(yarn global bin)
-
-install_greenkeeper: &install_greenkeeper
-  name: Install greenkeeper-lockfile globally
-  command: yarn global add greenkeeper-lockfile@2
-
 commands:
   greenkeeper_update:
     steps:
       - checkout
       - <<: [*restore_git, *restore_yarn]
       - run:
-          <<: *add_yarn_global
-      - run:
-          <<: *install_greenkeeper
-      - run:
           name: update lockfile
-          command: greenkeeper-lockfile-update
+          command: bash -c |
+            export PATH=$PATH:$(yarn global bin)
+            yarn global add greenkeeper-lockfile@2
+            greenkeeper-lockfile-update
       - run:
           name: Install dependencies
           command: yarn install --frozen-lockfile
@@ -71,12 +62,11 @@ commands:
     steps:
       - <<: [*restore_git, *restore_yarn]
       - run:
-          <<: *add_yarn_global
-      - run:
-          <<: *install_greenkeeper
-      - run:
           name: Upload lockfile
-          command: greenkeeper-lockfile-upload
+          command: bash -c |
+            export PATH=$PATH:$(yarn global bin)
+            yarn global add greenkeeper-lockfile@2
+            greenkeeper-lockfile-upload
 
 # List of jobs
 jobs:
