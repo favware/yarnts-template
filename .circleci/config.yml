@@ -6,6 +6,12 @@ orbs:
 aliases:
   - &checkout
     checkout
+  - &store_artifacts
+    store_artifacts:
+      path: coverage
+  - &codecov
+    codecov/upload:
+      file: coverage/*.json
 
 run_yarn: &run_yarn
   name: Install yarn packages
@@ -64,10 +70,8 @@ commands:
     - run:
         name: Testing
         command: yarn test --collectCoverage
-    - store_artifacts:
-        path: coverage
-    - codecov/upload:
-        file: coverage/*.json
+    - *store_artifacts
+    - *codecov
   greenkeeper_upload:
     steps:
     - *checkout
