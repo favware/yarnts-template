@@ -27,13 +27,11 @@ aliases:
     restore_cache:
       name: Restore Yarn Package Cache
       key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
-  - &checkout
-    checkout
 
 commands:
   greenkeeper_update:
     steps:
-      - *checkout
+      - checkout
       - *restore_yarn
       - run:
           name: Install Greenkeeper Lockfile
@@ -44,8 +42,8 @@ commands:
       - run:
           name: Install dependencies
           command: yarn install --frozen-lockfile
-      - <<: *save_yarn
-      - <<: *save_git
+      - *save_yarn
+      - *save_git
   nodejs:
     steps:
       - *restore_git
