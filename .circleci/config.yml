@@ -8,7 +8,7 @@ aliases:
     save_cache:
       name: Save Git Cache
       key: git-code-{{ .Revision }}
-      path:
+      paths:
         - .
         - .git
         - ~/.ssh
@@ -16,7 +16,7 @@ aliases:
     save_cache:
       name: Save Yarn Package Cache
       key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
-      path:
+      paths:
         - ~/.cache/yarn
         - node_modules
   - &restore_git
