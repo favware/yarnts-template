@@ -3,41 +3,43 @@ version: 2.1
 orbs:
   codecov: codecov/codecov@1.0.5
 
-base_image: &base_image
-  image: circleci/node:10
-
-job_common: &job_common
-  docker:
-    - <<: *base_image
-
-save_git: &save_git
-  save_cache:
-    key: git-code-{{ .Revision }}
-    paths:
-      - .
-      - .git
-      - ~/.ssh
-
-save_yarn: &save_yarn
-  save_cache:
-    key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
-    paths:
-      - ~/.cache/yarn
-      - node_modules
-
-restore_git: &restore_git
-  restore_cache:
-    key: git-code-{{ .Revision }}
-
-restore_yarn: &restore_yarn
-  restore_cache:
-    key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+aliases:
+  - &base_image
+    image: circleci/node:10
+  - &docker_setup
+    docker:
+      - <<: *base_image
+  - &save_git
+    save_cache:
+      name: Save Git Cache
+      key: git-code-{{ .Revision }}
+      path:
+        - .
+        - .git
+        - ~/.ssh
+  - &save_yarn
+    save_cache:
+      name: Save Yarn Package Cache
+      key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      path:
+        - ~/.cache/yarn
+        - node_modules
+  - &restore_git
+    restore_cache:
+      name: Restore Git Cache
+      key: git-code-{{ .Revision }}
+  - &restore_yarn
+    restore_cache:
+      name: Restore Yarn Package Cache
+      key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+  - &checkout
+    checkout
 
 commands:
   greenkeeper_update:
     steps:
-      - checkout
-      - <<: *restore_yarn
+      - *checkout
+      - *restore_yarn
       - run:
           name: Install Greenkeeper Lockfile
           command: yarn global add greenkeeper-lockfile@2
@@ -51,8 +53,8 @@ commands:
       - <<: *save_git
   nodejs:
     steps:
-      <<: *restore_git
-      <<: *restore_yarn
+      - *restore_git
+      - *restore_yarn
       - run:
           name: Linting
           command: yarn lint
@@ -65,8 +67,8 @@ commands:
           file: coverage/*.json
   greenkeeper_upload:
     steps:
-      <<: *restore_git
-      <<: *restore_yarn
+      - *restore_git
+      - *restore_yarn
       - run:
           name: Install Greenkeeper Lockfile
           command: yarn global add greenkeeper-lockfile@2
@@ -77,11 +79,11 @@ commands:
 # List of jobs
 jobs:
   lockfile_update:
-    <<: *job_common
+    *docker_setup
     steps:
       - greenkeeper_update
   node-v10:
-    <<: *job_common
+    *docker_setup
     steps:
       - nodejs
   node-v11:
@@ -95,7 +97,7 @@ jobs:
     steps:
       - nodejs
   lockfile_upload:
-    <<: *job_common
+    *docker_setup
     steps:
       - greenkeeper_upload
 
