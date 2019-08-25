@@ -111,10 +111,7 @@ workflows:
   version: 2
   node-multi-build:
     jobs:
-      - lockfile_update:
-          filters:
-            branches:
-              ignore: master
+      - lockfile_update
       - node-v10:
           requires:
             - lockfile_update
@@ -130,6 +127,3 @@ workflows:
             - node-v10
             - node-v11
             - node-v12
-          filters:
-            branches:
-              ignore: master
