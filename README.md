@@ -1,40 +1,30 @@
 <div align="center">
   <p>
-  <a href="https://favware.tech/yarnts-template"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/yarnts-template.png" height="200" alt="logo"/></a>
+  <a href="https://favware.tech"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/yarnts-template.png" height="200" alt="logo"/></a>
   </p>
 
   <p>
-<h1> @favware/yarnts-template</h1>
+<h1> YarnTS Template</h1>
 <h3> Template repository for Yarn and TypeScript based Node libraries</h3>
   </p>
-<p>
-  <a href="https://github.com/favware/yarnts-template/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/favware/yarnts-template.svg?logo=github&style=flat-square" alt="License" title="License"></a><!--
-  --><a href="https://circleci.com/gh/favware/yarnts-template/tree/master"><img src="https://img.shields.io/circleci/project/github/favware/yarnts-template/master.svg?logo=circleci&style=flat-square" alt="Build Status" title="Build Status" /></a><!--
-  --><a href="https://codecov.io/gh/favware/yarnts-template"><img src="https://img.shields.io/codecov/c/github/favware/yarnts-template?logo=codecov&style=flat-square" alt="Test Coverage" title="Test Coverage" /></a>
-</p>
 
-<p>
-  <a href="https://www.npmjs.com/package/@favware/yarnts-template"><img    src="https://img.shields.io/bundlephobia/min/@favware/yarnts-template.svg?logo=webpack&style=popout-square"  alt="NPM bundle size (minified)" title="NPM bundle size (minified)" /></a><!--
-  --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/bundlephobia/minzip/@favware/yarnts-template.svg?logo=webpack&style=flat-square" alt="NPM bundle size (minified + gzip)" title="NPM bundle size (minified + gzip)" /></a><!--
-  --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/npm/v/@favware/yarnts-template.svg?color=crimson&label=npm%20version&logo=npm&style=flat-square" alt="NPM Version" title="NPM Version" /></a><!--
-  --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/npm/dw/@favware/yarnts-template.svg?color=crimson&label=downloads%2Fweek&logo=npm&style=flat-square" alt="NPM Weekly Downloads" title="NPM Weekly Downloads" /></a><!--
-  --><a href="https://www.npmjs.com/package/@favware/yarnts-template"><img src="https://img.shields.io/npm/dt/@favware/yarnts-template.svg?color=crimson&label=downloads%20total&logo=npm&style=flat-square" alt="NPM Total Downloads" title="NPM Total Downloads" /></a>
-</p>
-
-<p>
-  <a href="https://twitter.com/Favna_/follow"><img src="https://img.shields.io/badge/twitter-follow-brightgreen.svg?logo=twitter&colorB=1DA1F2&style=flat-square&link=https://twitter.com/Favna_/follow" alt="Follow me on Twitter" title="Follow me on Twitter" /></a><!--
-  --><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XMAYCF9SDHZ34"><img src="https://img.shields.io/badge/paypal-donate-brightgreen.svg?logo=paypal&colorB=00457C&style=flat-square&link=https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XMAYCF9SDHZ34" alt="Donate with PayPal" title="Donate with PayPal" /></a><!--
-  --><a href="https://www.patreon.com/bePatron?u=9336537"><img src="https://img.shields.io/badge/patreon-donate-brightgreen.svg?logo=patreon&colorB=F96854&style=flat-square&link=https://www.patreon.com/bePatron?u=9336537" alt="Become a Patron" title="Become a Patron" /></a>
-</p>
-
-<p>
-  <a href="https://favware.tech/redirect/server"><img src="https://discordapp.com/api/guilds/512303595966824458/widget.png?style=banner2" alt="Join Discord Server"/></a>
-</p>
 </div>
 
 ---
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/favware/yarnts-template.svg)](https://greenkeeper.io/)
+**Project Status**
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/favware/yarnts-template.svg?style=flat-square)](https://greenkeeper.io/)
+[![GitHub](https://img.shields.io/github/license/favware/yarnts-template?logo=github&style=flat-square)](https://github.com/favware/yarnts-template/blob/master/LICENSE.md)
+[![CircleCI](https://img.shields.io/circleci/build/github/favware/yarnts-template?logo=circleci&style=flat-square)](https://circleci.com/gh/favware/yarnts-template/tree/master)
+[![Codecov](https://img.shields.io/codecov/c/github/favware/yarnts-template?logo=codecov&style=flat-square)](https://codecov.io/gh/favware/yarnts-template)
+
+**Social Media and Donations**
+
+[![Join Discord server](https://img.shields.io/discord/512303595966824458?color=697EC4&label=Join%20Discord%20Server&logo=discord&logoColor=FDFEFE&style=flat-square)](https://favware.tech/redirect/server)
+[![Twitter Follow](https://img.shields.io/twitter/follow/favna_?label=Follow%20@Favna_&logo=twitter&colorB=1DA1F2&style=flat-square)](https://twitter.com/Favna_/follow)
+[![Patreon Donate](https://img.shields.io/badge/patreon-donate-brightgreen.svg?label=Donate%20with%20Patreon&logo=patreon&colorB=F96854&style=flat-square&link=https://www.patreon.com/bePatron?u=9336537)](https://www.patreon.com/bePatron?u=9336537)
+[![PayPal Donate](https://img.shields.io/badge/paypal-donate-brightgreen.svg?label=Donate%20with%20Paypal&logo=paypal&colorB=00457C&style=flat-square&link=https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XMAYCF9SDHZ34)](https://www.patreon.com/bePatron?u=9336537)
 
 ## What does it do?
 
@@ -72,8 +62,8 @@ import REPLACE_ME from '@favware/yarnts-template'
 <a name="sampleFunc"></a>
 
 ## sampleFunc(param) ⇒ <code>string</code>
-**Kind**: global function  
-**Returns**: <code>string</code> - Directly returned "param"  
+**Kind**: global function
+**Returns**: <code>string</code> - Directly returned "param"
 
 | Param | Type | Description |
 | --- | --- | --- |
