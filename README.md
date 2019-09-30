@@ -14,7 +14,6 @@
 
 **Project Status**
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/favware/yarnts-template.svg?style=flat-square)](https://greenkeeper.io/)
 [![GitHub](https://img.shields.io/github/license/favware/yarnts-template?logo=github&style=flat-square)](https://github.com/favware/yarnts-template/blob/master/LICENSE.md)
 [![CircleCI](https://img.shields.io/circleci/build/github/favware/yarnts-template?logo=circleci&style=flat-square)](https://circleci.com/gh/favware/yarnts-template/tree/master)
 [![Codecov](https://img.shields.io/codecov/c/github/favware/yarnts-template?logo=codecov&style=flat-square)](https://codecov.io/gh/favware/yarnts-template)
