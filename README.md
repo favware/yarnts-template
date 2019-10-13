@@ -56,21 +56,6 @@ When using TypeScript or Babel you can import this module with a default import:
 import REPLACE_ME from '@favware/yarnts-template'
 ```
 
-## Documentation
-
-<a name="sampleFunc"></a>
-
-## sampleFunc(param) ⇒ <code>string</code>
-**Kind**: global function
-**Returns**: <code>string</code> - Directly returned "param"
-
-| Param | Type | Description |
-| --- | --- | --- |
-| param | <code>string</code> | Sample parameters |
-
-
-* * *
-
 ## About
 
 ### Contributing

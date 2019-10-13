@@ -1,8 +1,7 @@
 
 /**
- * @function sampleFunc
- * @param  {string} param Sample parameters
- * @return {string} Directly returned "param"
+ * @param param Sample parameters
+ * @returns Directly returned "param"
  */
 export const sampleFunc = (param: string): string => {
   return param;
