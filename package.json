@@ -51,7 +51,7 @@
     "jest": "^24.9.0",
     "lint-staged": "^9.4.2",
     "open-cli": "^5.0.0",
-    "rollup": "^1.25.2",
+    "rollup": "^1.26.4",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-copy": "^3.1.0",
