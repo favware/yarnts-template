@@ -3,7 +3,9 @@
   "compilerOptions": {
     "allowJs": true,
     "checkJs": true,
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "module": "commonjs",
+    "moduleResolution": "node"
   },
   "include": [
     "src",
