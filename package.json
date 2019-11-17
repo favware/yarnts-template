@@ -35,7 +35,7 @@
     "@types/common-tags": "^1.8.0",
     "@types/glob": "^7.1.1",
     "@types/jest": "^24.0.22",
-    "@types/node": "^12.12.7",
+    "@types/node": "^12.12.8",
     "@types/rollup-plugin-progress": "^1.1.0",
     "chalk": "^3.0.0",
     "common-tags": "^1.8.0",
