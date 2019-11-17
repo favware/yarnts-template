@@ -34,7 +34,7 @@
     "@favware/ts-config": "^1.1.0",
     "@types/common-tags": "^1.8.0",
     "@types/glob": "^7.1.1",
-    "@types/jest": "^24.0.22",
+    "@types/jest": "^24.0.23",
     "@types/node": "^12.12.7",
     "@types/rollup-plugin-progress": "^1.1.0",
     "chalk": "^3.0.0",
