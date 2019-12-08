@@ -105,5 +105,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "resolutions": {
+    "**/**/serialize-javascript": "^2.1.1"
   }
 }
