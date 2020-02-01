@@ -14,30 +14,28 @@ export default {
       file: './dist/index.js',
       format: 'cjs',
       exports: 'named',
-      sourcemap: true,
+      sourcemap: true
     },
     {
       file: './dist/index.es.js',
       format: 'es',
       exports: 'named',
-      sourcemap: true,
+      sourcemap: true
     }
   ],
   plugins: [
     cleaner({
-      targets: [
-        './dist/'
-      ],
+      targets: ['./dist/']
     }),
     progress(),
     external(),
     resolve(),
     typescript({
       rollupCommonJSResolveHack: true,
-      clean: true,
+      clean: true
     }),
     commonjs(),
     terser({ ecma: 5 }),
-    copy({targets: [ { src: 'docs/example.js', dest: 'dist/' } ] })
-  ],
+    copy({ targets: [{ src: 'docs/example.js', dest: 'dist/' }] })
+  ]
 };

@@ -1,4 +1,4 @@
-import defaultSample, {sampleFunc} from '../src';
+import defaultSample, { sampleFunc } from '../src';
 
 describe('Named Import Sample', () => {
   test('should work with named import', () => {

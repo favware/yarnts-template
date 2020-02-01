@@ -1,4 +1,3 @@
-
 /**
  * @param param Sample parameters
  * @returns Directly returned "param"
