@@ -60,7 +60,7 @@
     "rollup-plugin-typescript2": "^0.25.3",
     "serve": "^11.3.0",
     "standard-version": "7.1.0",
-    "ts-jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
     "ts-node": "^8.6.2",
     "typedoc": "^0.16.9",
     "typedoc-plugin-nojekyll": "^1.0.1",
