@@ -37,7 +37,7 @@
     "@types/jest": "^25.1.4",
     "@types/node": "^13.9.8",
     "@types/rollup-plugin-progress": "^1.1.0",
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "common-tags": "^1.8.0",
     "concurrently": "^5.1.0",
     "cz-conventional-changelog": "3.1.0",
