@@ -22,9 +22,9 @@ coverage/
 
 # IDE Settings
 .idea/
-.vscode/
 .vs/
 *.iml
 
 # Transpiled files
 dist/
+docs/
