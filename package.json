@@ -37,7 +37,7 @@
     "jest-circus": "^26.1.0",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
-    "standard-version": "8.0.0",
+    "standard-version": "8.0.1",
     "ts-jest": "^26.1.1",
     "typedoc": "^0.17.8",
     "typedoc-plugin-nojekyll": "^1.0.1",
