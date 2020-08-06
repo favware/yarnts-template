@@ -3,7 +3,7 @@ name: Docgen
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
       - name: Build documentation
         run: yarn docs
       - name: Publish Docs
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           echo -e "\n# Initialise some useful variables"
           REPO="https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"

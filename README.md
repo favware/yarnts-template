@@ -14,7 +14,7 @@
 
 **Project Status**
 
-[![GitHub](https://img.shields.io/github/license/favware/yarnts-template?logo=github&style=flat-square)](https://github.com/favware/yarnts-template/blob/master/LICENSE.md)
+[![GitHub](https://img.shields.io/github/license/favware/yarnts-template?logo=github&style=flat-square)](https://github.com/favware/yarnts-template/blob/main/LICENSE.md)
 
 **Social Media and Donations**
 
